@@ -31,15 +31,14 @@
 ## 🧱 2. Arhitectura sistemului
 
 ```mermaid
-flowchart LR
-    AC["Priza AC 230V"] --> PSU["Sursa DC 12V / 5A + Intrerupator"]
-    PSU -->|"12V + Cap 1000uF"| BUCK["Convertor Buck 12V -> 5V"]
-    PSU -->|"12V + 3x Cap 100uF"| DRV["3x Drivere Duale TB6612FNG"]
-    BUCK -->|"5V + Cap 470uF"| ESP["ESP32-WROOM-32 (Wi-Fi AP + Web UI)"]
-    SW["Microswitch Pahar"] -->|"Siguranta prezenta pahar"| ESP
-    ESP -->|"Semnal logic 3.3V"| DRV
-    DRV -->|"Comutare 12V ON/OFF"| PUMP["6x Pompe Peristaltice Kamoer 12V 5W"]
-    PUMP -->|"Furtun silicon alimentar"| NOZ["Duza comuna de turnare"]
+flowchart TD
+    PSU["Sursa 12V 5A + Cap 1000uF"] --> BUCK["Buck 12V -> 5V + Cap 470uF"]
+    PSU --> DRV["3x TB6612FNG + 3x Cap 100uF"]
+    BUCK --> ESP["ESP32-WROOM-32 (Wi-Fi + Web UI)"]
+    SW["Microswitch Pahar"] --> ESP
+    ESP -->|"Semnal 3.3V"| DRV
+    DRV -->|"Comutare 12V"| PUMP["6x Pompe Kamoer 12V 5W"]
+    PUMP --> NOZ["Furtun Silicon -> Duza Comuna"]
 ```
 
 <table>
