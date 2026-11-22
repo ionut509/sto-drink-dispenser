@@ -9,4 +9,12 @@ Acest director va conține fișierele CAD (`.step` / `.f3d`) și modelele gata d
 - Canalul / colectorul comun pentru cele 6 duze de turnare
 
 *Material recomandat: **PETG**.*
-*Status: în curs de încărcare.*
+
+## Modele 3D de referință (`components/`)
+
+Folosite pentru proiectarea suporților și a compartimentului de electronică în CAD:
+
+- [ESP32_WROOM.step](components/ESP32_WROOM.step) — model 3D placă de dezvoltare ESP32-WROOM-32
+- [small_peristaltic_pump.STEP](components/small_peristaltic_pump.STEP) — model 3D pompă peristaltică 12V
+
+*Status carcasă: în curs de încărcare.*

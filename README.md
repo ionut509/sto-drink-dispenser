@@ -57,7 +57,10 @@ Dozator automat de cocktailuri și băuturi cu **6 canale**, controlat direct de
 
 ```text
 .
-├── cad/                  # Fișiere CAD / STL pentru carcasa 3D PETG (în lucru)
+├── cad/                  # Fișiere CAD / STL pentru carcasa 3D PETG & modele componente
+│   └── components/       # Modele 3D de referință (.step) pentru integrarea în CAD
+│       ├── ESP32_WROOM.step
+│       └── small_peristaltic_pump.STEP
 ├── docs/                 # Scheme electrice (JPG, PDF) și documentație
 │   ├── wiring-schematic.jpg
 │   └── wiring-schematic.pdf
