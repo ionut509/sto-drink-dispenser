@@ -1,0 +1,22 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# PlatformIO / Arduino / ESP32
+.pio/
+*.bin
+*.elf
+*.map
+build/
+
+# CAD temporary & backup files
+*.bak
+*.tmp
+*.autosave.*
+*.lck
+*.fcstd1
